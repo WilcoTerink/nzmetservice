@@ -24,7 +24,6 @@ nc1_path = datasets.get_path('wrf_hourly_precip_nz8km_test')
 ms1 = select_bounds(nc1_path, min_lat, max_lat, min_lon, max_lon)
 
 ms_df = to_df(ms1, True).dropna().reset_index()
-ms_df1 = ms_df[(ms_df.time <= '2018-09-24 12:00') & (ms_df.time >= '2018-09-24')]
 
 
 

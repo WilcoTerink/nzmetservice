@@ -10,7 +10,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 name = 'nzmetservice'
 main_package = 'nzmetservice'
 datasets = 'datasets'
-version = '1.0.1'
+version = '1.0.2'
 
 # The below code is for readthedocs. To have sphinx/readthedocs interact with
 # the contained package, readthedocs needs to build the package. But the dependencies

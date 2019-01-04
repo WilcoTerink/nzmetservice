@@ -26,8 +26,9 @@ def select_bounds(ms_nc, min_lat, max_lat, min_lon, max_lon):
     """
     ms1 = xr.open_dataset(ms_nc)
     ms2 = ms1.where((ms1.longitude >= min_lon) & (ms1.longitude <= max_lon) & (ms1.latitude >= min_lat) & (ms1.latitude <= max_lat), drop=True)
-    ms2 = ms2.where(ms1.longitude > 0, drop=True)
     ms1.close()
+    if (ms2.longitude <= 0).any():
+        ms2 = ms2.where(ms1.longitude > 0, drop=True)
 
     return ms2
 
