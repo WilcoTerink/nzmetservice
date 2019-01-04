@@ -9,7 +9,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 # General parameters
 name = 'nzmetservice'
 main_package = 'nzmetservice'
-# datasets = 'datasets'
+datasets = 'datasets'
 version = '1.0.1'
 
 # The below code is for readthedocs. To have sphinx/readthedocs interact with
@@ -159,9 +159,9 @@ setup(
     #
     # If using Python 2.6 or earlier, then these have to be included in
     # MANIFEST.in as well.
-    # package_data={  # Optional
-    #     main_package: [datasets + '/*.csv'],
-    # },
+    package_data={  # Optional
+        main_package: [datasets + '/*.nc'],
+    },
 
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
