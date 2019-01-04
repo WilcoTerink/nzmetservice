@@ -1,6 +1,6 @@
 {% set name = "nzmetservice" %}
-{% set version = "1.0.2" %}
-{% set sha256 = "b5ef2a6fe00823c8f644677abf3b8a9c8096eeda000d18f6b12ece1758b667e4" %}
+{% set version = "1.0.3" %}
+{% set sha256 = "f36f09c6220edcf86b3da200ccdb22e4fca3e87f82d0ca7973b7dda792c9704d" %}
 
 # sha256 is the prefered checksum -- you can get it for a file with:
 #  `openssl sha256 <file name>`.
