@@ -4,6 +4,7 @@ Created on Tue Oct  9 11:22:22 2018
 
 @author: michaelek
 """
+import pytest
 import pandas as pd
 from nzmetservice import select_bounds, to_df, datasets
 
@@ -19,13 +20,19 @@ max_lon = 175
 nc1_path = datasets.get_path('wrf_hourly_precip_nz8km_test')
 
 ####################################
-### Import
+### Tests
 
-ms1 = select_bounds(nc1_path, min_lat, max_lat, min_lon, max_lon)
+def test_select():
+    ms1 = select_bounds(nc1_path, min_lat, max_lat, min_lon, max_lon)
 
-ms_df = to_df(ms1, True).dropna().reset_index()
+    assert len(ms1.time) == 85
 
 
+def test_to_df():
+    ms1 = select_bounds(nc1_path, min_lat, max_lat, min_lon, max_lon)
+    ms_df = to_df(ms1, True).dropna().reset_index()
+
+    assert len(ms_df) == 692160
 
 
 
