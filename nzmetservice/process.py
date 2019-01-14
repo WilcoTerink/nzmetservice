@@ -1,5 +1,38 @@
 # -*- coding: utf-8 -*-
 import xarray as xr
+#import numpy as np
+#from util import to_proj4
+
+################################
+### Parameters
+
+lat_coord='south_north'
+lon_coord='west_east'
+
+
+##################################
+
+
+#def add_xy_coords(nc):
+#    """
+#
+#    """
+#    x1 = xr.open_dataset(nc)
+#    x2  = x1.copy()
+#    x1.close()
+#
+#    proj4 = to_proj4(x2)
+#
+#    nlat = x2.dims[lat_coord]
+#    nlon = x2.dims[lon_coord]
+#    x_res = int(x2.attrs['dx_m'])
+#    y_res = int(x2.attrs['dy_m'])
+#
+#    lat = np.arange(nlat, dtype='int32') * y_res
+#    lon = np.arange(nlon, dtype='int32') * x_res
+#
+#    x2.coords[lat_coord] = ((lat_coord), lat)
+#    x2.coords[lon_coord] = ((lon_coord), lon)
 
 
 def select_bounds(ms_nc, min_lat, max_lat, min_lon, max_lon):
